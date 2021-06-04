@@ -1,11 +1,15 @@
-const webpack = require("webpack");
+const webpack = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  mode: "production",
-  devtool: "source-map",
+  mode: 'production',
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.name": JSON.stringify("Production environment"),
+      'process.env.name': JSON.stringify('Production environment'),
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerHost: process.env.WIN_LOCALHOST,
     }),
   ],
 };
