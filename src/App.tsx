@@ -1,6 +1,6 @@
-import "./styles.css";
-import IMAGE from "./react.png";
 import { ClickCounter } from "./ClickCounter";
+import IMAGE from "./react.png";
+import "./styles.css";
 
 export const App = () => {
   return (
